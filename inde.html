@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <title>Recipe web 🥗</title>
+</head>
+
+<body>
+
+    <section>
+        <header class="header-text">
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+        </header>
+    </section>
+
+    <section >
+        <div class="hero" id="search">
+            <div class="text-center">
+                <h1 class="text-warning">Search your favorite food</h1>
+    
+                <form action="/search" method="GET" class="">
+                    <div class="search-cont">
+                        <input id="search-box" type="text" name="query" class="form" placeholder="Search"
+                        aria-label="Search" aria-describedby="basic-addon2" required>
+                        <button id="search-btn" class="button-btn" type="submit">Search Recipe</button>
+                    </div>
+                </form>
+                <p id="input-error" class="text-danger fs-5"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-----Recipes Section Start---------------------------------->
+<section class="Recipes-section">
+
+    <div class="recipe" id="recipes">
+        <h2>Featured Recipes</h2>
+        <div class="box" id ="main-container">
+            <div class="card-detail">
+                <img src="momo.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 1</h3>
+                    <P id="recipe"> </P>
+                    <button type="button" onclick="loadSingleItem()" id="instructions" class="button" >View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail" id="main-container">
+                <img src="menu-momo.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 2</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail" id="main-container">
+                <img src="pizza.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 3</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="meat-123668_1280.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 4</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="food-5981232_1280.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 5</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="Maincourse.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 6</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="menu-burger.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 7</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+            <div class="card-detail">
+                <img src="appetizer.jpg" alt="" class="card-img">
+                <div class="content">
+                    <h3>Recipe 8</h3>
+                    <P>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</P>
+                    <button>View Recipe</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <!-- Recipe details will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!----About Section Start---------------------------------->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="main">
+            <img src="menu-burger.jpg" alt="" >
+            <div class="about-text">
+                <p>Welcome to our recipe website, where culinary inspiration meets delicious creations! Whether you're a
+                    seasoned chef or a passionate home cook, we are here to ignite your taste buds and guide you on a
+                    delightful culinary journey. Our extensive collection of recipes covers a wide range of cuisines,
+                    from comforting classics to innovative fusion dishes. Each recipe is thoughtfully crafted, tested,
+                    and presented with step-by-step instructions, ensuring that even the novice cook can create
+                    extraordinary meals. We believe that cooking is an art form that brings people together, and our
+                    goal is to empower you to explore your culinary creativity and make every meal a masterpiece. So
+                    come on in, explore our diverse recipe collection, and let's embark on a delightful gastronomic
+                    adventure together!</p>
+
+            </div>
+        </div>
+    </section>
+    <!--------------categories section-------------------------------->
+    <div class="categories">
+        <h2>categories</h2>
+        <div class="box">
+            <div class="ca-card">
+                <img src="Maincourse.jpg" alt="">
+                <div class="content">
+                    <h3>Main Courses</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button> Read More</button>
+
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="dessert.jpg" alt="">
+                <div class="content">
+                    <h3>Desserts</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="greens.jpg" alt="">
+                <div class="content">
+                    <h3>Healthy Eats</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="dinning.jpg" alt="">
+                <div class="content">
+                    <h3>Dinner</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="cake appetizer.jpg" alt="">
+                <div class="content">
+                    <h3> Appetizers</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+            <div class="ca-card">
+                <img src="salad.jpg" alt="">
+                <div class="content">
+                    <h3>Salads</h3>
+                    <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.</p>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <!------------contact section-------------------------->
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 Main Street, city,city,country</p>
+            <p><strong>Phone:</strong>1234567890</p>
+            <p><strong>Email:</strong>info@example.com</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" required></textarea>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+            <a href="#" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+            <a href="#" class="social-icon"> <i class="fab fa-instagram"></i> </a>
+        </div>
+        <h5>CopyRight © 2024 By Risper Njeri Recipes </h5>
+    </footer>
+    <script src="src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
