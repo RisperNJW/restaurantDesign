@@ -106,3 +106,23 @@ function displayDetails (){
 
 }
 
+// Function to open category information in a new tab
+async function openCategoryPage(category) {
+
+    try {
+        const response = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php?c=${category}`); // Replace with your API endpoint
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        
+        // Assuming the API returns a URL for the category details
+        const categoryUrl = data.url; // Replace with the actual key from your API response
+
+        // Open the URL in a new tab
+        window.open(categoryUrl, '_blank');
+        
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
